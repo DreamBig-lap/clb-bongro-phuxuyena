@@ -52,7 +52,7 @@ export default function Hero() {
           >
             Bền bỉ, tốc độ, tinh thần đồng đội — chúng tôi xây dựng thế hệ
             bóng rổ mới của Phú Xuyên. Tham gia hành trình chinh phục mọi
-            cú ném.
+            cú ném
           </p>
 
           <div

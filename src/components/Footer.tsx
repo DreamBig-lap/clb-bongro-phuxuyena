@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-ink-800 pt-6 text-sm text-ink-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} CLB Bóng rổ Phú Xuyên A. Đã đăng ký.</p>
+          <p>© {new Date().getFullYear()} CLB Bóng rổ Phú Xuyên A. Đã đăng ký</p>
           <p className="text-ink-600">
             Thiết kế bởi ManhCuong
           </p>

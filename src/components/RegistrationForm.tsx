@@ -17,8 +17,8 @@ export default function RegistrationForm() {
   }, []);
 
   return (
-    <section id="join" className="relative overflow-hidden py-24">
-      {/* Background Slider - Vẫn giữ nguyên hiệu ứng mượt mà */}
+    <section id="join" className="relative overflow-hidden py-24 border-t border-ink-800/50">
+      {/* Background Slider */}
       {heroImages.map((img, index) => (
         <div
           key={img}
@@ -32,11 +32,11 @@ export default function RegistrationForm() {
           }}
         />
       ))}
-      <div className="absolute inset-0 bg-ink-950/80" />
+      <div className="absolute inset-0 bg-ink-950/85 backdrop-blur-sm" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16 items-center">
           <div className="flex flex-col justify-center">
             <div className="mb-3 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-brand-500">
               <UserPlus className="h-4 w-4" /> Gia nhập CLB
@@ -50,49 +50,44 @@ export default function RegistrationForm() {
             </p>
           </div>
 
-          {/* Form đầy đủ */}
-          <div className="rounded-3xl border border-ink-700/60 bg-ink-900/60 p-6 backdrop-blur-sm sm:p-8">
+          {/* Form kính mờ */}
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8 shadow-2xl">
             {state.succeeded ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
-                <CheckCircle2 className="h-16 w-16 text-brand-500 mb-4" />
-                <h3 className="text-3xl text-white">Đăng ký thành công!</h3>
+                <CheckCircle2 className="h-16 w-16 text-brand-500 mb-4 animate-bounce" />
+                <h3 className="text-3xl font-display text-white">Đăng ký thành công!</h3>
+                <p className="mt-2 text-ink-300">Cảm ơn Cường đã đăng ký, ban huấn luyện sẽ sớm liên hệ.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <Field label="Họ và tên" required><input type="text" name="Họ và tên" required className={inputCls} /></Field>
-                  <Field label="Năm sinh" required><input type="number" name="Năm sinh" required className={inputCls} /></Field>
+                  <Field label="Họ và tên" required><input type="text" name="Họ và tên" required className={inputCls} placeholder="Nhập họ tên..." /></Field>
+                  <Field label="Năm sinh" required><input type="number" name="Năm sinh" required className={inputCls} placeholder="VD: 2010" /></Field>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <Field label="Số điện thoại" required><input type="tel" name="Số điện thoại" required className={inputCls} /></Field>
-                  <Field label="Email" required><input type="email" name="Email" required className={inputCls} /></Field>
+                  <Field label="Số điện thoại" required><input type="tel" name="Số điện thoại" required className={inputCls} placeholder="Số điện thoại..." /></Field>
+                  <Field label="Email" required><input type="email" name="Email" required className={inputCls} placeholder="Email liên hệ..." /></Field>
                 </div>
-                <Field label="Địa chỉ" required><input type="text" name="Địa chỉ" required className={inputCls} /></Field>
+                <Field label="Địa chỉ" required><input type="text" name="Địa chỉ" required className={inputCls} placeholder="Địa chỉ của bạn..." /></Field>
                 
                 <div className="grid grid-cols-3 gap-4">
-                  <Field label="Chiều cao (cm)"><input type="number" name="Chiều cao" className={inputCls} /></Field>
-                  <Field label="Cân nặng (kg)"><input type="number" name="Cân nặng" className={inputCls} /></Field>
+                  <Field label="Chiều cao (cm)"><input type="number" name="Chiều cao" className={inputCls} placeholder="168" /></Field>
+                  <Field label="Cân nặng (kg)"><input type="number" name="Cân nặng" className={inputCls} placeholder="80" /></Field>
                   <Field label="Vị trí">
                     <select name="Vị trí" className={inputCls}>
-                      {POSITIONS.map(p => <option key={p} value={p}>{p}</option>)}
+                      {POSITIONS.map(p => <option key={p} value={p} className="bg-ink-900 text-white">{p}</option>)}
                     </select>
                   </Field>
                 </div>
 
-                <Field label="Kinh nghiệm bóng rổ"><textarea name="Kinh nghiệm" className={`${inputCls} h-20`} /></Field>
-                <Field label="Lý do gia nhập"><textarea name="Lý do" className={`${inputCls} h-20`} /></Field>
+                <Field label="Kinh nghiệm bóng rổ"><textarea name="Kinh nghiệm" className={`${inputCls} h-20 resize-none`} placeholder="Bạn đã chơi bóng rổ bao lâu..." /></Field>
+                <Field label="Lý do gia nhập"><textarea name="Lý do" className={`${inputCls} h-20 resize-none`} placeholder="Lý do bạn muốn tham gia CLB..." /></Field>
 
                 <button 
                    type="submit" 
-                    disabled={state.submitting} 
-                    className="w-full py-4 text-white font-bold rounded-xl shadow-xl transition-all duration-300 hover:bg-white/30"
-                    style={{
-                         backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                         backdropFilter: 'blur(12px)',
-                          WebkitBackdropFilter: 'blur(12px)',
-                          border: '1px solid rgba(255, 255, 255, 0.3)'
-                       }}
->
+                   disabled={state.submitting} 
+                   className="w-full py-4 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:bg-brand-600 bg-brand-500 hover:shadow-brand-500/30 border border-white/20 uppercase tracking-wider text-sm cursor-pointer mt-2"
+                >
                   {state.submitting ? "Đang gửi..." : "GỬI ĐƠN ĐĂNG KÝ"}
                 </button>
               </form>
@@ -104,12 +99,12 @@ export default function RegistrationForm() {
   );
 }
 
-const inputCls = 'w-full rounded-lg border border-ink-700 bg-ink-950/60 px-4 py-3 text-white outline-none focus:border-brand-500';
+const inputCls = 'w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-ink-400 outline-none focus:border-brand-500 focus:bg-white/10 transition-all backdrop-blur-md text-sm';
 
 function Field({ label, required, children }: { label: string, required?: boolean, children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-ink-200">{label}{required && <span className="text-brand-500">*</span>}</span>
+      <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-ink-300">{label}{required && <span className="text-brand-500 ml-1">*</span>}</span>
       {children}
     </label>
   );

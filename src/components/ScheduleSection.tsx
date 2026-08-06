@@ -127,7 +127,7 @@ export default function ScheduleSection() {
           </p>
 
           {/* Bộ lọc tab */}
-          <div className="mt-8 inline-flex rounded-xl bg-ink-900/80 p-1.5 border border-ink-800">
+          <div className="mt-8 inline-flex rounded-xl bg-white/5 p-1.5 border border-white/10 backdrop-blur-md">
             <button
               onClick={() => setFilter('all')}
               className={`rounded-lg px-6 py-2 text-sm font-semibold transition-all ${
@@ -173,17 +173,17 @@ export default function ScheduleSection() {
                 {practices.map((item) => (
                   <div
                     key={item.id}
-                    className="flex flex-col sm:flex-row gap-4 rounded-2xl border border-ink-800 bg-ink-900/60 p-5 transition-all hover:border-brand-500/40"
+                    className="flex flex-col sm:flex-row gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition-all duration-300 hover:border-brand-500/60 hover:bg-white/10 hover:shadow-xl"
                   >
                     {/* Ô ngày tháng */}
-                    <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-ink-800 border border-ink-700/60 text-center">
-                      <span className="text-xs font-bold text-ink-400 uppercase">{item.day_label}</span>
+                    <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-white/10 border border-white/10 text-center backdrop-blur-sm">
+                      <span className="text-xs font-bold text-ink-300 uppercase">{item.day_label}</span>
                       <span className="font-display text-xl font-bold text-white leading-none">{item.day_number}</span>
                       <span className="text-[10px] text-brand-400 font-semibold">{item.month_label}</span>
                     </div>
 
                     <div className="flex-1">
-                      <span className="inline-block rounded-md bg-brand-500/10 px-2.5 py-0.5 text-[11px] font-bold text-brand-400 uppercase tracking-wider">
+                      <span className="inline-block rounded-md bg-brand-500/20 px-2.5 py-0.5 text-[11px] font-bold text-brand-400 uppercase tracking-wider">
                         Tập luyện
                       </span>
                       <h4 className="mt-1.5 text-base font-bold text-white">{item.title}</h4>
@@ -198,7 +198,7 @@ export default function ScheduleSection() {
                       </div>
 
                       {item.description && (
-                        <p className="mt-2.5 flex items-start gap-1.5 text-xs text-ink-400 border-t border-ink-800/80 pt-2">
+                        <p className="mt-2.5 flex items-start gap-1.5 text-xs text-ink-300 border-t border-white/10 pt-2">
                           <Info className="h-3.5 w-3.5 text-brand-500 shrink-0 mt-0.5" />
                           {item.description}
                         </p>
@@ -220,10 +220,10 @@ export default function ScheduleSection() {
                 {matches.map((item) => (
                   <div
                     key={item.id}
-                    className="flex flex-col sm:flex-row gap-4 rounded-2xl border border-brand-500/30 bg-ink-900/80 p-5 transition-all hover:border-brand-500/60"
+                    className="flex flex-col sm:flex-row gap-4 rounded-2xl border border-white/15 bg-white/5 p-5 backdrop-blur-md transition-all duration-300 hover:border-brand-500/60 hover:bg-white/10 hover:shadow-xl"
                   >
                     {/* Ô ngày tháng thi đấu */}
-                    <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-brand-500 text-center text-white shadow-lg shadow-brand-500/20">
+                    <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-brand-500/80 text-center text-white shadow-lg shadow-brand-500/20 backdrop-blur-sm">
                       <span className="text-xs font-bold uppercase opacity-90">{item.day_label}</span>
                       <span className="font-display text-xl font-bold leading-none">{item.day_number}</span>
                       <span className="text-[10px] font-semibold opacity-90">{item.month_label}</span>
@@ -251,7 +251,7 @@ export default function ScheduleSection() {
                       </div>
 
                       {item.description && (
-                        <p className="mt-2.5 flex items-start gap-1.5 text-xs text-ink-400 border-t border-ink-800/80 pt-2">
+                        <p className="mt-2.5 flex items-start gap-1.5 text-xs text-ink-300 border-t border-white/10 pt-2">
                           <Info className="h-3.5 w-3.5 text-brand-500 shrink-0 mt-0.5" />
                           {item.description}
                         </p>

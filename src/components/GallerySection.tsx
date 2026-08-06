@@ -27,7 +27,7 @@ const MOCK_GALLERY: GalleryItem[] = [
     title: 'Giải đấu giao hữu mở rộng 2026',
     description: 'Trận thi đấu kịch tính giữa CLB Bóng rổ Phú Xuyên A và các đội bạn.',
     category: 'match',
-    image_url: 'https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/494950011_1161112282696722_8420268140078712639_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1366&ctp=s2048x1366&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGal8ymh4B16hmxK5gc1nDIVcOC1w3jteNVw4LXDeO147TfT7H9QZNBVjYO_9FgrJLPfMt2BHAlthlN-4tdIs6f&_nc_ohc=lqkowqn79hQQ7kNvwHU7Cqq&_nc_oc=AdpKfqjxiCIGNGXhKuNcRshqIuWfGAFn1_5qYk4m66AQ0af677aGZ0L6iPP4aaBSX6g&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=BHZITEveq03zHdDASwW5dQ&_nc_ss=7b2a8&oh=00_AQE6Gs_5cBzVH4X1XLm_75-siJKCGxz6oZCe1SCbGFK2EQ&oe=6A715584',
+    image_url: '/anha.jpg',
     event_date: '2026-05-15',
     sort_order: 1,
     created_at: new Date().toISOString()
@@ -37,7 +37,7 @@ const MOCK_GALLERY: GalleryItem[] = [
     title: 'Buổi tập luyện thể lực & kỹ thuật ném bóng',
     description: 'Rèn luyện phản xạ và chiến thuật thi đấu 3x3 ngoài trời.',
     category: 'training',
-    image_url: 'https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/485975788_1124813812993236_8001600613985389647_n.jpg?stp=dst-jpg_tt6&cstp=mx1276x956&ctp=s1276x956&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEoJGfLCuFIaLlEAudWEo0hyDUbhcsn_FHINRuFyyf8UW8Kjz4bw_xaTc2kbVsjm1VLFhqIVcmyGvOLfOk-h1RI&_nc_ohc=FNcqEXeXA7EQ7kNvwHH_eFO&_nc_oc=AdpFrsdFl54tfu1LFVDpD7HTiYwi8pjwZ7oSCDgTXmCM7fyhfHxqUBXuLxyrgq-nbes&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=nl_Bmfc5UiuDWOOhMzjezg&_nc_ss=7b2a8&oh=00_AQEi6oHap5TFaJbVdpI-751hHH1fdmX12PuyJ6GkSTOYmw&oe=6A713986',
+    image_url: '/anhb.jpg',
     event_date: '2026-05-10',
     sort_order: 2,
     created_at: new Date().toISOString()
@@ -47,7 +47,7 @@ const MOCK_GALLERY: GalleryItem[] = [
     title: 'Sự kiện giao lưu và tuyển thành viên mới',
     description: 'Chào đón các bạn học sinh có niềm đam mê trái bóng cam gia nhập CLB.',
     category: 'event',
-    image_url: 'https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/484569691_1121764739964810_8474559517898334924_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFa5w94wGWS--M7-FG6GCFNYhl1huC0UsliGXWG4LRSyXO52CJBtw0i9kTVp1D942CuBa8nR0yP_mJ0dQiLyam3&_nc_ohc=VN1NSVUktUIQ7kNvwHQ9j01&_nc_oc=AdrkTo9PdFDn9hybu8r1KddC9Otsk3QQKQHm2yPcJeruPNP9c6MDh8f9eUP2zGWTsCs&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=SlGhwIzQWYdHLkDggu_sIw&_nc_ss=7b2a8&oh=00_AQHSymW4gC0zI3nMP82Ry-5eDdsKVKQ90R7LETLS2B4YqA&oe=6A713ECF',
+    image_url: '/anhc.jpg',
     event_date: '2026-04-20',
     sort_order: 3,
     created_at: new Date().toISOString()
@@ -57,7 +57,7 @@ const MOCK_GALLERY: GalleryItem[] = [
     title: 'Chung kết giải bóng rổ học sinh',
     description: 'Những giây phút bùng nổ cảm xúc trên sân đấu.',
     category: 'match',
-    image_url: 'https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/483955972_1117245307083420_1355520276498518355_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF42UUQuGlC-lf6qSMDn5Url5CzgU854nSXkLOBTznidEgfrOJM5Ar_kdpvc-aBZIpOIBJBSLXEpSk4lvlFFD1Y&_nc_ohc=FzIfLQVzlKIQ7kNvwH1Xi5Y&_nc_oc=Adq943F1IUMa-FSSqf4aAoeaAFam9l0Ot_DRF_lf-gK7ybiu0mlf3rel_znkbgrE7XU&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=qJOoUMjp4rH3mEsegAQPsA&_nc_ss=7b2a8&oh=00_AQGEFFcInOxPWolSvfHPNT-demv4K9_b7ii6Wi9Nqu5QtA&oe=6A713E00',
+    image_url: '/anhd.jpg',
     event_date: '2026-04-05',
     sort_order: 4,
     created_at: new Date().toISOString()
@@ -67,7 +67,7 @@ const MOCK_GALLERY: GalleryItem[] = [
     title: 'Rèn luyện kỹ năng phòng thủ & nhồi bóng',
     description: 'Tập trung nâng cao thể lực và sự ăn ý giữa các đồng đội.',
     category: 'training',
-    image_url: 'https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/472413150_1063611369113481_1079536177626398776_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1537&ctp=s2048x1537&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHgw1owk-ERgCli0OKPGSiWAcQNS8VipUwBxA1LxWKlTLTCO4VStYPQ93GZ85HmVH-pyAvzz4rEKdUOQ4yG_XVA&_nc_ohc=kMANEGN-tr0Q7kNvwGSKl8_&_nc_oc=AdqiEx3J7SIuTS09sIkVa5tETSlgL3TKdLKWCpWAgtpH-bIoaM5Fxjl9HPk9tt7YouY&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=JbwmSkEWQjyh-51tJLpLIg&_nc_ss=7b2a8&oh=00_AQGWsMfNDvuwX36EP809d05Wuewi4jcGZ-hn8YzS0swqwQ&oe=6A7144AA',
+    image_url: '/anhe.jpg',
     event_date: '2026-03-28',
     sort_order: 5,
     created_at: new Date().toISOString()

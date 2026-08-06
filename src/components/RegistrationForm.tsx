@@ -85,10 +85,10 @@ export default function RegistrationForm() {
 
                 <button 
                    type="submit" 
-                   disabled={state.submitting} 
-                   className="w-full py-4 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:bg-brand-600 bg-brand-500 hover:shadow-brand-500/30 border border-white/20 uppercase tracking-wider text-sm cursor-pointer mt-2"
+                   disabled={true} 
+                   className="w-full py-4 text-white/50 font-bold rounded-xl shadow-lg bg-gray-700/50 border border-white/10 uppercase tracking-wider text-sm cursor-not-allowed mt-2"
                 >
-                  {state.submitting ? "Đang gửi..." : "GỬI ĐƠN ĐĂNG KÝ"}
+                  ĐÃ ĐÓNG ĐƠN - HẸN GẶP LẠI ĐỢT SAU
                 </button>
               </form>
             )}

@@ -82,7 +82,17 @@ export default function RegistrationForm() {
                 <Field label="Kinh nghiệm bóng rổ"><textarea name="Kinh nghiệm" className={`${inputCls} h-20`} /></Field>
                 <Field label="Lý do gia nhập"><textarea name="Lý do" className={`${inputCls} h-20`} /></Field>
 
-                <button type="submit" disabled={state.submitting} className="w-full bg-brand-500 py-4 text-white font-bold rounded-xl hover:bg-brand-600 transition-all">
+                <button 
+                   type="submit" 
+                    disabled={state.submitting} 
+                    className="w-full py-4 text-white font-bold rounded-xl shadow-xl transition-all duration-300 hover:bg-white/30"
+                    style={{
+                         backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                         backdropFilter: 'blur(12px)',
+                          WebkitBackdropFilter: 'blur(12px)',
+                          border: '1px solid rgba(255, 255, 255, 0.3)'
+                       }}
+>
                   {state.submitting ? "Đang gửi..." : "GỬI ĐƠN ĐĂNG KÝ"}
                 </button>
               </form>
